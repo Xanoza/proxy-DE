@@ -1,7 +1,7 @@
 require('newrelic');
 let express = require('express');
 // let compress = require('compression');
-const port = 8000;
+const port = 80;
 
 let app = express();
 // app.use(compress());
@@ -25,7 +25,7 @@ app.use(
 app.use(
   '/menu',
   proxy({
-    target: 'http://ec2-3-17-28-103.us-east-2.compute.amazonaws.com/',
+    target: 'http://ec2-54-86-231-192.compute-1.amazonaws.com/',
     changeOrigin: true
   })
 );
